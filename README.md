@@ -1,4 +1,6 @@
-# 自動で徳を積むための試験とCIハンズオン 2019-03-16
+# 自動で徳を積むための試験と CI ハンズオン 2019-03-16
 
-- Event: [自動で徳を積むための試験とCIハンズオン | Frog](https://frogagent.com/event/testtools-ci-workshop/)
+- Event: [自動で徳を積むための試験と CI ハンズオン | Frog](https://frogagent.com/event/testtools-ci-workshop/)
 - Original: https://github.com/ginpei/hannya-roll
+
+https://travis-ci.org/MotokiNaito/Travis-CI.svg?branch=master
