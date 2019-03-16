@@ -15,14 +15,14 @@ describe('HannyaRoller', () => {
   beforeEach(() => {
     el = window.document.createElement('div');
     Object.defineProperty(el, 'clientWidth', {
-      value: 800
+      value: 800,
     });
     Object.defineProperty(el, 'clientHeight', {
-      value: 600
+      value: 600,
     });
     roller = new HannyaRoller({
       el,
-      text
+      text,
     });
 
     roller.start();
