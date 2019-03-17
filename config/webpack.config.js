@@ -1,11 +1,12 @@
 const path = require('path');
-/** @type any */ const CleanWebpackPlugin = require('clean-webpack-plugin');
+/** @type any */
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const publicPath = isProduction ? '/hannya-roll' : '';
+const publicPath = isProduction ? '/Travis-CI' : '';
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
@@ -19,24 +20,20 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
-      },
-    ],
+    rules: [{
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader',
+      ],
+    }, ],
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: 'public',
-        ignore: ['index.html'],
-      },
-    ]),
+    new CopyWebpackPlugin([{
+      from: 'public',
+      ignore: ['index.html'],
+    }, ]),
     new HtmlWebpackPlugin({
       minify: isProduction && {
         removeComments: true,
